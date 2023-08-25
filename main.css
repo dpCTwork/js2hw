@@ -1,0 +1,17 @@
+body {
+    /* background-color: rgb(44, 47, 65); */
+    background-color: rgb(13,17,23);
+    font-family: Roboto;
+    font-size: 13pt;
+    /* color: rgb(198, 200, 221); */
+    color: rgb(230, 237, 243);
+}
+
+a {
+    color: rgb(137, 223, 223);}
+
+code {
+    font-family: nerd-font, monospace;
+    font-size: 12pt;
+    color: rgb(255, 187, 0);
+}

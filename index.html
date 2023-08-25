@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="homework2.js"></script>
+    <title>JavaScript HW2</title>
+</head>
+<body>
+
+<p>
+    <h3>2 Codewars problems solved in JS. (1 already solved in Python, 1 new in JS)</h3> 
+</p>
+Questions and my solutions below, with links to the problems.
+
+<h4>
+    Problem 1: <a href="https://www.codewars.com/kata/reviews/54c27d56111ec18e6c0003c1/groups/58b0ad1300a23a45b500004e">You're a Square! A square of squares</a><br> (already done in Python)
+</h4>
+<pre style="font-family: sans-serif;">
+You like building blocks. You especially like building blocks that are squares. And what you even like more, is to
+arrange them into a square of square building blocks!
+
+However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted
+things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check
+if your number of building blocks is a perfect square.
+
+Task
+Given an integral number, determine if it's a square number:
+
+In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is
+the product of some integer with itself.
+
+The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+Examples
+-1 => false
+0 => true
+3 => false
+4 => true
+25 => true
+26 => false
+<h4>SOLUTION</h4><code>
+var isSquare = function(n){
+    if ((n > -1) && (Math.sqrt(n) % 1 == 0)){
+    return true
+    }
+    return false; 
+}</code>
+
+<h4>Problem 2: <a href="https://www.codewars.com/kata/reviews/5c8bfbbf3b8ec2000116c7cb/groups/64e642f9c5be680001bfa4ed">A wolf in sheep's clothing</a><br> (new JS Codewars problem)
+</h4>
+<pre style="font-family: sans-serif;">
+Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to
+be sheep. Fortunately, you are good at spotting them.
+
+Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the
+queue which is at the end of the array:
+
+<code>
+[sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep] (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+   7      6      5      4      3            2      1
+</code>
+If the wolf is the closest animal to you, return <em>"Pls go away and stop eating my sheep"</em>. Otherwise, return <em>"Oi! Sheep
+number N! You are about to be eaten by a wolf!"</em> where N is the sheep's position in the queue.
+
+Note: there will always be exactly one wolf in the array.
+
+Examples
+<code>Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+Input: ["sheep", "sheep", "wolf"]
+Output: "Pls go away and stop eating my sheep"</code>
+<h4>SOLUTION</h4><code>
+function warnTheSheep(queue) {
+    queue.reverse()
+    if (queue.indexOf('wolf') !== 0){
+        return `Oi! Sheep number ${queue.indexOf('wolf')}! You are about to be eaten by a wolf!`
+    }
+    return `Pls go away and stop eating my sheep`
+}</code>
+    
+</body>
+</html>
